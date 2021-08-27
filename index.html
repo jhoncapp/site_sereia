@@ -934,7 +934,7 @@
 
     ga('send', 'pageview');*/
     
-      //tn: tracker name
+   //tn: tracker name
   //tc: tracher code
   //cn: cookie name
   (function(tn, tc, cn) {
@@ -957,7 +957,7 @@
       var s = document.createElement("script");
       s.async = true;
       s.src = "https://script.google.com/macros/s/" + tc + "/dev/library?tn=" + tn;
-      document.body.appendChild(s);
+      document.head.appendChild(s);
     }
   })("tracker", "AKfycbyGFEDzXumKf3__GZyZdFe8-NWV1EfTyW9DLObpITpZ", "_trackerCk");
   //https://script.google.com/macros/s/AKfycbyGFEDzXumKf3__GZyZdFe8-NWV1EfTyW9DLObpITpZ/dev
