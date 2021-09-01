@@ -929,12 +929,13 @@
     })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'gaTracking');
 
     ga('create', 'UA-193455935-1', 'auto');
-
-
-
+    
     ga('send', 'pageview');
     
-   /*//tn: tracker name
+    //Enviar pro banhytics Hardcoded:
+    //Chamar função que instala biblioteca de tageamento:
+    
+   //tn: tracker name
   //tc: tracher code
   //cn: cookie name
   (function(tn, tc, cn) {
@@ -951,7 +952,7 @@
         });
       }
     };
-
+  
     if(window[tn].status == "loading_code") {
       window[tn].status = "waiting_script";
       var s = document.createElement("script");
@@ -959,9 +960,15 @@
       s.src = "https://script.google.com/macros/s/" + tc + "/dev/library?tn=" + tn;
       document.head.appendChild(s);
     }
-  })("tracker", "AKfycbyGFEDzXumKf3__GZyZdFe8-NWV1EfTyW9DLObpITpZ", "_trackerCk");
-  //https://script.google.com/macros/s/AKfycbyGFEDzXumKf3__GZyZdFe8-NWV1EfTyW9DLObpITpZ/dev*/
-  //codigo banhytics está comentado
+  })("trackerFonte", "AKfycbyGFEDzXumKf3__GZyZdFe8-NWV1EfTyW9DLObpITpZ", "_trackerCk");
+    
+    //fazer o envio em si:
+   trackerFonte.send("pageview", {
+    cd1: "fonte"
+   });
+    
+  //https://script.google.com/macros/s/AKfycbyGFEDzXumKf3__GZyZdFe8-NWV1EfTyW9DLObpITpZ/dev
+  //codigo banhytics está DESCOMENTADO
 
   </script>
 
