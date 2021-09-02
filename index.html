@@ -970,13 +970,13 @@
    });
     
    //2. Clique no botão faça um orçamento
-   document.querySelector('a.btn-xl').addEventListener('click', function(evt){
-    trackerFonte.send('event', {
-      category: "orçamento",
-      action: "clique",
-      label: "botão orçamento"
+   document.querySelector("a.btn-xl").addEventListener('click', function(evt){
+    tracker.send("event", {
+        category: "orçamento",
+        action: "clique",
+        label: "botão orçamento"
     })
-   });
+});
     
   //https://script.google.com/macros/s/AKfycbyGFEDzXumKf3__GZyZdFe8-NWV1EfTyW9DLObpITpZ/dev
   //codigo banhytics está DESCOMENTADO
