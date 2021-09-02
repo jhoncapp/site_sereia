@@ -971,7 +971,7 @@
     
    //2. Clique no botão faça um orçamento
    document.querySelector("a.btn-xl").addEventListener('click', function(evt){
-    window["trackerFonte"].send("event", {
+    trackerFonte.send("event", {
         category: "orçamento",
         action: "clique",
         label: "botão orçamento"
