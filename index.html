@@ -973,14 +973,7 @@
     cd1: "fonte"
    });
     
-   //2. Clique no botão faça um orçamento
-   document.querySelector("a.btn-xl").addEventListener('click', function(evt){
-    trackerFonte.send("event", {
-        category: "orçamento",
-        action: "clique",
-        label: "botão orçamento"
-    })
-   });
+   //Tags estão no final do BODY !
     
   //https://script.google.com/macros/s/AKfycbyGFEDzXumKf3__GZyZdFe8-NWV1EfTyW9DLObpITpZ/dev
   //codigo banhytics está DESCOMENTADO
@@ -2614,6 +2607,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       var element = document.getElementById('call-me-baby');
       element.style.right = '20px';
     }, Math.random() * 12000 + 5000);
+  </script>
+  
+  <script>
+    //TAGS DE EVENTOS
+    
+    //2. Clique no botão faça um orçamento
+   document.querySelector("a.btn-xl").addEventListener('click', function(evt){
+    trackerFonte.send("event", {
+        category: "orçamento",
+        action: "clique",
+        label: "botão orçamento"
+    })
+   });
+    
   </script>
 
 </body>
