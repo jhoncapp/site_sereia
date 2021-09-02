@@ -2622,6 +2622,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
      
    });
     
+    //3.CLique em headings(SERVIÇOS, PORTIFÓLIO,SOBRE...)->desafio meu msm
+    window.addEventListener('click', function(evt){
+    if(evt.target.matches(".section-heading")){
+        //console.log("ola");
+        trackerFonte.send("event", {
+        category: "portifólio",
+        action: "clique",
+        label: "clique h2" + evt.target.innerText
+    })
+    }
+    
+  });
+    
+    
+    
   </script>
 
 </body>
