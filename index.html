@@ -2622,7 +2622,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
      
    });
     
-    //3.CLique em headings(SERVIÇOS, PORTIFÓLIO,SOBRE...)->desafio meu msm
+    //3.CLique em headings(SERVIÇOS, PORTIFÓLIO,SOBRE...)->desafio meu msm(Jeito do Ban)
     window.addEventListener('click', function(evt){
     if(evt.target.matches(".section-heading")){
         //console.log("ola");
@@ -2635,7 +2635,30 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     
   });
     
+    //Scroll no formulario de orçamento(1 vez)
+
+  var divForm = document.querySelector("#contact");  //cheguei na div do form
+  divForm.visualizou = false;     //escopo global pra alterar o estado
+
+  window.addEventListener('scroll', function(evt){
+
+    var divBottom = divForm.getBoundingClientRect().bottom; //pega o bottom da div form
+    var innerheight = this.window.innerHeight;  //pega a altura total da página
+
+    //ver se ainda não visualizou e se chegou na div do form
+    if(divForm.visualizou == false && divBottom < innerHeight){
+      console.log("rolou");
+      trackerFonte.send("event", {
+          category: "portifólio",
+          action: "scroll",
+          label:  "scroll 1 vez no form "
+      });
+      divForm.visualizou = true;
+    }
     
+   
+  });
+  
     
   </script>
 
