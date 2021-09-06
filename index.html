@@ -2635,7 +2635,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     
   });
     
-    //Scroll no formulario de orçamento(1 vez)
+  //4. Tag de Scroll no formulario de orçamento(1 vez)
 
   var divForm = document.querySelector("#contact");  //cheguei na div do form
   divForm.visualizou = false;     //escopo global pra alterar o estado
@@ -2657,8 +2657,40 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     }
     
    
-  });
+    });
+    
+    //5.Tag de detectar se começou a preencher o formulario, usando change
+    
+    var comecouPreenchimento = false;
+    var form = document.querySelector("form");
+    //campos do form
+    /*var nome = document.querySelector("#name");
+    var email = document.querySelector("#email");
+    var telefone = document.querySelector("#phone");
+    var mensagem = document.querySelector("#message"); */
+
+    //listener vai de pai pra filho
+
+    //listener pra pegar evento nos campos:
+    form.addEventListener('change', function(evt){
+
+    //ver se o valor do campo do form(target) foi preenchido com algo e se já não tinha ocorrido um evento do tipo antes
+    if(evt.target.value != "" && comecouPreenchimento == false){
+        //console.log(evt.target);
+        trackerFonte.send("event", {
+            category: "portifólio",
+            action: "fill",
+            label: "iniciou preenchimento",
+            cd1: "valor enviado: " + evt.target.value
+        })
+        comecouPreenchimento = true;
+        //console.log(evt.target.value);
+    }
+
+
+    });
   
+    
     
   </script>
 
