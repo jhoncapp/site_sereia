@@ -2663,14 +2663,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     
     var comecouPreenchimento = false;
     var form = document.querySelector("form");
-    //campos do form
-    /*var nome = document.querySelector("#name");
-    var email = document.querySelector("#email");
-    var telefone = document.querySelector("#phone");
-    var mensagem = document.querySelector("#message"); */
-
-    //listener vai de pai pra filho
-
+   
     //listener pra pegar evento nos campos:
     form.addEventListener('change', function(evt){
 
@@ -2684,7 +2677,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             cd1: "valor enviado: " + evt.target.value
         })
         comecouPreenchimento = true;
-        //console.log(evt.target.value);
+        
     }
 
 
