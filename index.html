@@ -2617,7 +2617,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     trackerFonte.send("event", {
         category: "orçamento",
         action: "clique",
-        label: "botão orçamento"
+        label: "botão orçamento",
+        cd1: "fonte"
     })
      
    });
@@ -2629,7 +2630,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         trackerFonte.send("event", {
         category: "portifólio",
         action: "clique",
-        label: "clique h2 " + evt.target.innerText
+        label: "clique h2 " + evt.target.innerText,
+        cd1: "fonte"
     })
     }
     
@@ -2651,7 +2653,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       trackerFonte.send("event", {
           category: "portifólio",
           action: "scroll",
-          label:  "scroll 1 vez no form "
+          label:  "scroll 1 vez no form ",
+          cd1: "fonte"
       });
       divForm.visualizou = true;
     }
@@ -2673,8 +2676,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         trackerFonte.send("event", {
             category: "portifólio",
             action: "fill",
-            label: "iniciou preenchimento",
-            cd1: "valor enviado: " + evt.target.value
+            label: "valor enviado: " + evt.target.value,
+            cd1: "fonte"
         })
         comecouPreenchimento = true;
         
